@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.clerk.UIfragments.Dashboard.DashboardFragment"
+        android:label="Home"
+        tools:layout="@layout/dashboard_layout">
+        <action
+            android:id="@+id/action_homeFragment_to_chargeDetailsFragment"
+            app:destination="@id/chargeDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_navigation2"
+            app:destination="@id/navigation2" />
+        <action
+            android:id="@+id/action_homeFragment_to_checkDuesFragment"
+            app:destination="@id/checkDuesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_checkStatusFragment"
+            app:destination="@id/checkStatusFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_receiveFragmentFragment"
+            app:destination="@id/receiveFragmentFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_recentPaymentsFragment"
+            app:destination="@id/recentPaymentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupsFragment"
+        android:name="com.example.clerk.UIfragments.Groups.GroupsFragment"
+        android:label="Groups"
+        tools:layout="@layout/fragment_groups" >
+        <action
+            android:id="@+id/action_groupsFragment_to_navigation3"
+            app:destination="@id/navigation3" />
+        <action
+            android:id="@+id/action_groupsFragment_to_grpFullViewFragment"
+            app:destination="@id/grpFullViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/candidatesFragment"
+        android:name="com.example.clerk.UIfragments.Candidates.CandidatesFragment"
+        android:label="Candidates"
+        tools:layout="@layout/fragment_candidates" >
+        <action
+            android:id="@+id/action_candidatesFragment_to_navigation2"
+            app:destination="@id/navigation2" />
+        <action
+            android:id="@+id/action_candidatesFragment_to_candidateFullViewFragment"
+            app:destination="@id/candidateFullViewFragment" />
+        <action
+            android:id="@+id/action_candidatesFragment_to_checkDuesFragment"
+            app:destination="@id/checkDuesFragment" />
+        <action
+            android:id="@+id/action_candidatesFragment_to_recentPaymentsFragment"
+            app:destination="@id/recentPaymentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chargesFragment"
+        android:name="com.example.clerk.UIfragments.Charges.ChargesFragment"
+        android:label="Charges"
+        tools:layout="@layout/fragment_charges" >
+        <action
+            android:id="@+id/action_chargesFragment_to_chargeDetailsFragment"
+            app:destination="@id/chargeDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/penaltiesFragment"
+        android:name="com.example.clerk.UIfragments.Feedback.FeedbackFragment"
+        android:label="Feedback"
+        tools:layout="@layout/fragment_penalties" />
+    <fragment
+        android:id="@+id/removedFragment"
+        android:name="com.example.clerk.UIfragments.Removed.RemovedFragment"
+        android:label="Old Candidates"
+        tools:layout="@layout/fragment_removed" />
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.clerk.UIfragments.Help.HelpFragment"
+        android:label="Help"
+        tools:layout="@layout/fragment_help" />
+    <navigation
+        android:id="@+id/navigation2"
+        app:startDestination="@id/personalDetailsFragment">
+        <fragment
+            android:id="@+id/choosePhotoFragment"
+            android:name="com.example.clerk.UIfragments.Candidates.NewCandidateFragments.ChoosePhotoFragment"
+            android:label="New Candidate"
+            tools:layout="@layout/fragment_choose_photo" />
+        <fragment
+            android:id="@+id/personalDetailsFragment"
+            android:name="com.example.clerk.UIfragments.Candidates.NewCandidateFragments.PersonalDetailsFragment"
+            android:label="New Candidate"
+            tools:layout="@layout/fragment_personal_details" >
+            <action
+                android:id="@+id/action_personalDetailsFragment_to_contactDetailsFragment"
+                app:destination="@id/contactDetailsFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/chooseGroupFragment"
+            android:name="com.example.clerk.UIfragments.Candidates.NewCandidateFragments.ChooseGroupFragment"
+            android:label="New Candidate"
+            tools:layout="@layout/fragment_choose_group" >
+
+            <action
+                android:id="@+id/action_chooseGroupFragment_to_choose_extra_charges_fragment"
+                app:destination="@id/choose_extra_charges_fragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/contactDetailsFragment"
+            android:name="com.example.clerk.UIfragments.Candidates.NewCandidateFragments.ContactDetailsFragment"
+            android:label="New Candidate"
+            tools:layout="@layout/fragment_contact_details" >
+            <action
+                android:id="@+id/action_contactDetailsFragment_to_chooseGroupFragment"
+                app:destination="@id/chooseGroupFragment" />
+        </fragment>
+        <fragment android:id="@+id/choose_extra_charges_fragment"
+            android:name="com.example.clerk.UIfragments.Candidates.NewCandidateFragments.ApplyChargesFragment"
+            android:label="New Candidate"
+            tools:layout="@layout/fragment_apply_charges">
+            <action
+                android:id="@+id/action_placeholder_to_choosePhotoFragment"
+                app:destination="@id/choosePhotoFragment" />
+        </fragment>
+        <action
+            android:id="@+id/action_global_candidateFullViewFragment"
+            app:destination="@id/candidateFullViewFragment" />
+    </navigation>
+    <navigation
+        android:id="@+id/navigation3"
+        app:startDestination="@id/group_details">
+        <fragment
+            android:id="@+id/apply_charges_fragment"
+            android:name="com.example.clerk.UIfragments.Groups.NewGroupFragments.ApplyChargesFragment"
+            android:label="New Group"
+            tools:layout="@layout/fragment_apply_charges"/>
+        <fragment
+            android:id="@+id/group_details"
+            android:name="com.example.clerk.UIfragments.Groups.NewGroupFragments.GroupDetailsFragment"
+            android:label="New Group"
+            tools:layout="@layout/fragment_group_details">
+            <action
+                android:id="@+id/action_group_details_to_apply_charges_fragment"
+                app:destination="@id/apply_charges_fragment" />
+        </fragment>
+        <action
+            android:id="@+id/action_global_grpFullViewFragment"
+            app:destination="@id/grpFullViewFragment"
+            app:popUpTo="@id/groupsFragment"
+            app:popUpToInclusive="false" />
+        <action android:id="@+id/action_global_apply_charges_fragment"
+            app:destination="@id/apply_charges_fragment"/>
+        <action
+            android:id="@+id/action_global_chargeDetailsFragment"
+            app:destination="@id/chargeDetailsFragment" />
+    </navigation>
+    <fragment
+        android:id="@+id/chargeDetailsFragment"
+        android:name="com.example.clerk.UIfragments.Charges.NewChargeFragments.ChargeDetailsFragment"
+        android:label="New Charge"
+        tools:layout="@layout/fragment_charge_details" >
+        <action
+            android:id="@+id/action_chargeDetailsFragment_to_chargesFragment"
+            app:destination="@id/chargesFragment"
+            app:popUpTo="@id/chargesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkDuesFragment"
+        android:name="com.example.clerk.UIfragments.Dashboard.CheckDues.CheckDuesFragment"
+        android:label="Check Dues"
+        tools:layout="@layout/fragment_check_dues" >
+        <action
+            android:id="@+id/action_checkDuesFragment_to_receiveFragmentFragment"
+            app:destination="@id/receiveFragmentFragment" />
+        <action
+            android:id="@+id/action_checkDuesFragment_to_candidateFullViewFragment"
+            app:destination="@id/candidateFullViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkStatusFragment"
+        android:name="com.example.clerk.UIfragments.Dashboard.CheckStatusFragment"
+        android:label="Check Status"
+        tools:layout="@layout/fragment_check_status" />
+    <fragment
+        android:id="@+id/receiveFragmentFragment"
+        android:name="com.example.clerk.UIfragments.Dashboard.ReceiveFragmentFragment"
+        android:label="Receive Payment"
+        tools:layout="@layout/fragment_receive_fragment" />
+    <fragment
+        android:id="@+id/grpFullViewFragment"
+        android:name="com.example.clerk.UIfragments.Groups.GroupFullView.GrpFullViewFragment"
+        android:label="Group Details"
+        tools:layout="@layout/fragment_grp_full_view" >
+        <action
+            android:id="@+id/action_grpFullViewFragment_to_candidatesFragment"
+            app:destination="@id/candidatesFragment" />
+        <action
+            android:id="@+id/action_grpFullViewFragment_to_checkDuesFragment"
+            app:destination="@id/checkDuesFragment" />
+        <action
+            android:id="@+id/action_grpFullViewFragment_to_applyChargesFragment"
+            app:destination="@id/applyChargesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/candidateFullViewFragment"
+        android:name="com.example.clerk.UIfragments.Candidates.CandidateFullView.CandidateFullViewFragment"
+        android:label="Candidate"
+        tools:layout="@layout/fragment_candidate_full_view2" >
+        <action
+            android:id="@+id/action_candidateFullViewFragment_to_apply_more_charges"
+            app:destination="@id/apply_more_charges_on_candidate_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recentPaymentsFragment"
+        android:name="com.example.clerk.UIfragments.Dashboard.RecentPayment.RecentPaymentFragment"
+        android:label="Recent Payments"
+        tools:layout="@layout/fragment_recent_payments" />
+    <action
+        android:id="@+id/action_global_navigation3"
+        app:destination="@id/navigation3"/>
+    <fragment
+        android:id="@+id/applyChargesFragment"
+        android:name="com.example.clerk.UIfragments.Groups.NewGroupFragments.ApplyChargesFragment"
+        android:label="Apply More Charges"
+        tools:layout="@layout/fragment_apply_charges"/>
+    <fragment
+        android:id="@+id/apply_more_charges_on_candidate_fragment"
+        android:name="com.example.clerk.UIfragments.Candidates.NewCandidateFragments.ApplyChargesFragment"
+        tools:layout="@layout/fragment_apply_charges2"
+        android:label="Apply More"/>
+
+</navigation>

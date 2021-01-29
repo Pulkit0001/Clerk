@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:showIn="navigation_view">
+
+    <item
+        android:title="@string/home_string"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:id="@+id/homeFragment"/>
+    <item
+        android:title="@string/groups_string"
+        android:icon="@drawable/ic_baseline_group_24"
+        android:id="@+id/groupsFragment"/>
+    <item
+        android:title="@string/candidates_string"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:id="@+id/candidatesFragment"/>
+    <item
+        android:title="@string/charges"
+        android:icon="@drawable/ic_baseline_scholarship_24"
+        android:id="@+id/chargesFragment"/>
+
+    <item
+        android:title="@string/removed_string"
+        android:icon="@drawable/ic_baseline_removed_24"
+        android:id="@+id/removedFragment"/>
+
+    <item
+        android:title="@string/feedback"
+        android:icon="@drawable/ic_baseline_penalty_24"
+        android:id="@+id/penaltiesFragment"/>
+    <item android:title="@string/help_string"
+        android:icon="@drawable/ic_baseline_help_24"
+        android:id="@+id/helpFragment"/>
+</menu>

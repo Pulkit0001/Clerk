@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UIfragments.Dashboard.ReceiveFragmentFragment">
+
+    <TextView
+        android:id="@+id/receiveFragment_candidate_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Candidate Name, Age"
+        android:textSize="16sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/receiveFragment_candidate_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Candidate ID"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="12dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/receiveFragment_candidate_name" />
+
+    <TextView
+        android:id="@+id/receiveFragment_guardian_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardian NAme"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="12dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/receiveFragment_candidate_id" />
+
+    <ImageView
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:id="@+id/receiveFragment_candidate_image"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_baseline_person_24"
+        android:tint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/receiveFragment_pending_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/receiveFragment_guardian_name">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/receiveFragment_issue_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:text="Last Issue On: dd/mm/yyyy"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Pending Amount"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/receiveFragment_pending_amount_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:paddingEnd="12dp"
+                    android:text="\u20b9 2000"
+                    android:textColor="@color/design_default_color_error"
+                    android:textSize="18sp"
+
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/receiveFragment_due_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="4dp"
+                android:text="Due Date On: dd/mm/yyyy"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="AMOUNT TO PAY:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/receiveFragment_paid_amount_et"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/receiveFragment_pending_card" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="12dp"
+        android:text="\u20b9 "
+        android:inputType="number"
+        android:backgroundTint="@color/colorPrimary"
+        android:id="@+id/receiveFragment_paid_amount_et"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/receiveFragment_pending_card" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/receiveFragment_accept_btn"
+        app:cornerRadius="16dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:elevation="6dp"
+        android:text="ACCEPT"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/receiveFragment_cancel_btn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:strokeColor="@color/colorPrimary"
+        android:text="CANCEL"
+        app:elevation="6dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        app:cornerRadius="16dp"
+        app:strokeWidth="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/receiveFragment_accept_btn"
+        tools:layout_editor_absoluteX="12dp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

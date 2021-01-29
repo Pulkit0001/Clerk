@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UIfragments.Candidates.NewCandidateFragments.ChoosePhotoFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/choose_photo_next_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_margin="8dp"
+        app:cardForegroundColor="@android:color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_marginStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"
+                android:text="Take a Picture*"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/choose_photo_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_baseline_person_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/new_camera_btn"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp"
+                android:paddingStart="8dp"
+                android:padding="0dp"
+                android:text="Camera"
+                android:paddingEnd="8dp"
+                app:strokeColor="@color/colorPrimary"
+                app:icon="@drawable/ic_baseline_camera_alt_24"
+                app:iconSize="36dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/gallery_btn"
+                app:strokeColor="@color/colorPrimary"
+                app:iconGravity="textEnd"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:paddingStart="8dp"
+                android:layout_height="56dp"
+                android:layout_marginBottom="8dp"
+                android:paddingEnd="8dp"
+                android:padding="0dp"
+                android:layout_marginStart="16dp"
+                android:text="Gallery"
+                app:icon="@drawable/ic_baseline_insert_photo_24"
+                app:iconSize="36dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/skip_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="3dp"
+        android:textStyle="bold"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_marginEnd="8dp"
+        android:text="skip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/choose_photo_next_btn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/choose_photo_next_btn"
+        android:text="NEXT"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

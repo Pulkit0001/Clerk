@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UIfragments.Dashboard.CheckStatusFragment">
+
+    <TextView
+        android:id="@+id/check_status_candidate_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="Candidate Name, Age"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/check_status_guardian_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:text="Guardian Name"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/check_status_candidate_name_tv" />
+
+    <ImageView
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:id="@+id/check_status_image"
+        android:src="@drawable/person_add"
+        android:tint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/check_status_image">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Pending Amount"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/check_status_pending_amount_tv"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="end"
+                android:paddingEnd="8dp"
+                android:text="\u20b920000"
+                android:textColor="@color/design_default_color_error"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView5"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:cardElevation="6dp"
+        app:cardCornerRadius="8dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description:"
+                android:textColor="@color/primaryColor"
+                android:textSize="14sp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last Issued On:"
+                    android:textSize="14sp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/check_status_joining_date_tv"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="end"
+                    android:paddingEnd="8dp"
+                    android:text="dd/mm/yyyy"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/description_view">
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                    android:id="@+id/description_child_view"
+                    >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last Issued On:"
+                    android:textSize="14sp"
+                    android:id="@+id/charge_name_description_tv"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginBottom="2dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:id="@+id/charge_amount_description_tv"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="end"
+                    android:paddingEnd="8dp"
+                    android:text="dd/mm/yyyy"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="14sp" />
+            </LinearLayout>
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last Issued On:"
+                    android:textSize="14sp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginBottom="2dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+
+                    android:layout_marginBottom="2dp"
+                    android:gravity="end"
+                    android:paddingEnd="8dp"
+                    android:text="dd/mm/yyyy"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="14sp" />
+            </LinearLayout>
+                <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Issued On:"
+                android:textSize="14sp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="2dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+
+                android:layout_marginBottom="2dp"
+                android:gravity="end"
+                android:paddingEnd="8dp"
+                android:text="dd/mm/yyyy"
+                android:textColor="@color/primaryColor"
+                android:textSize="14sp" />
+        </LinearLayout>
+                <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Issued On:"
+                android:textSize="14sp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="2dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+
+                android:layout_marginBottom="2dp"
+                android:gravity="end"
+                android:paddingEnd="8dp"
+                android:text="dd/mm/yyyy"
+                android:textColor="@color/primaryColor"
+                android:textSize="14sp" />
+        </LinearLayout>
+                <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Issued On:"
+                android:textSize="14sp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="2dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+
+                android:layout_marginBottom="2dp"
+                android:gravity="end"
+                android:paddingEnd="8dp"
+                android:text="dd/mm/yyyy"
+                android:textColor="@color/primaryColor"
+                android:textSize="14sp" />
+        </LinearLayout>
+                <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Issued On:"
+                android:textSize="14sp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="2dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+
+                android:layout_marginBottom="2dp"
+                android:gravity="end"
+                android:paddingEnd="8dp"
+                android:text="dd/mm/yyyy"
+                android:textColor="@color/primaryColor"
+                android:textSize="14sp" />
+        </LinearLayout>
+                <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Issued On:"
+                android:textSize="14sp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="2dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+
+                android:layout_marginBottom="2dp"
+                android:gravity="end"
+                android:paddingEnd="8dp"
+                android:text="dd/mm/yyyy"
+                android:textColor="@color/primaryColor"
+                android:textSize="14sp" />
+        </LinearLayout>
+                <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Issued On:"
+                android:textSize="14sp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="2dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+
+                android:layout_marginBottom="2dp"
+                android:gravity="end"
+                android:paddingEnd="8dp"
+                android:text="dd/mm/yyyy"
+                android:textColor="@color/primaryColor"
+                android:textSize="14sp" />
+        </LinearLayout>
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grand Total"
+                android:textSize="14sp"
+                android:textColor="@color/primaryColor"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="2dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:id="@+id/check_status_total_amount_tv"
+                android:layout_marginBottom="2dp"
+                android:gravity="end"
+                android:paddingEnd="8dp"
+                android:text="\u20b920000"
+                android:textColor="@color/primaryColor"
+                android:textSize="14sp" />
+
+        </LinearLayout><LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Due Date On:"
+                android:textSize="14sp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="2dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:id="@+id/check_status_due_date"
+                android:layout_marginBottom="2dp"
+                android:gravity="end"
+                android:paddingEnd="8dp"
+                android:text="dd/mm/yyyy"
+                android:textColor="@color/primaryColor"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accept Payment"
+        android:textSize="16sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
